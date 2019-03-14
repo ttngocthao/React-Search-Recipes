@@ -1,0 +1,475 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  color: navy;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-image: url("https://i.imgur.com/SnIJIDu.jpg");
+  background-attachment: fixed;
+}
+
+.App .logo {
+  width: 2.5rem;
+  position: absolute;
+  z-index: 10;
+  top: -1rem;
+  left: -1rem;
+}
+
+.App .logo img {
+  width: 100%;
+}
+
+.searchForm {
+  background-color: rgba(215, 237, 255, 0.808);
+  width: 80%;
+  padding: 0.5rem 0;
+  margin: 0rem auto;
+  position: relative;
+  top: 1rem;
+  border-radius: 20px;
+}
+
+.inputContainer {
+  margin: 0.2rem auto;
+}
+
+.inputContainer input {
+  background-color: transparent;
+  font-size: 0.9rem;
+  padding: 0.1rem 0;
+  border: none;
+  border-bottom: 2px gray solid;
+  width: 80%;
+  border-radius: 7px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.inputContainer input:focus {
+  border-bottom-color: navy;
+}
+
+.inputContainer input::placeholder {
+  color: navy;
+  font-size: 0.8rem;
+}
+
+.error {
+  color: navy;
+  font-size: 1rem;
+}
+
+.searchBtn {
+  width: 50%;
+  padding: 0.3rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: navy;
+  box-shadow: 2px 2px 2px gray;
+  margin: 0.7rem auto 0.3rem auto;
+}
+
+.searchBtn:disabled,
+button#prev:disabled,
+button#next:disabled {
+  background-color: silver;
+  color: #e2e2e2;
+  cursor: none;
+}
+
+.searchResult {
+  position: relative;
+  max-width: 227px;
+  margin: 0 auto;
+  top: 1.2rem;
+}
+
+.searchResult::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 354px;
+  outline: 3px solid navy;
+  position: absolute;
+  top: 8px;
+  left: 0.25rem;
+}
+
+.searchResult-wrapper {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.dishes {
+  min-width: 225px;
+  margin: 0.5rem 0.3rem;
+  flex: 1;
+  height: 350px;
+  background-color: rgba(215, 237, 255, 0.808);
+  opacity: 0.5;
+  transform: scale(0.7);
+  transition: opacity 300ms linear,
+    transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.searchResult.activeSlide-0 #dish-0 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-1 #dish-1 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-2 #dish-2 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-3 #dish-3 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-4 #dish-4 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-5 #dish-5 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-6 #dish-6 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-7 #dish-7 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-8 #dish-8 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-9 #dish-9 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-10 #dish-10 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-11 #dish-11 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-12 #dish-12 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-13 #dish-13 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-14 #dish-14 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-15 #dish-15 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-16 #dish-16 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-17 #dish-17 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-18 #dish-18 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-19 #dish-19 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-20 #dish-20 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-21 #dish-21 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-22 #dish-22 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-23 #dish-23 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-24 #dish-24 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-25 #dish-25 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-26 #dish-26 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-27 #dish-27 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-28 #dish-28 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult.activeSlide-29 #dish-29 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.searchResult figure {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.searchResult figure img {
+  width: 100%;
+}
+
+.searchResult h1 {
+  font-size: 1rem;
+  padding: 0.2rem 0;
+  margin: 0;
+}
+
+.searchResult h1 a {
+  color: #114fa5;
+}
+
+.searchResult h3 {
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  color: gray;
+}
+
+.dishes h1 {
+  font-size: 1rem;
+}
+
+.dishes h3 {
+  font-size: 0.8rem;
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+button#prev,
+button#next {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: #d7edff;
+  position: absolute;
+}
+
+button .fas {
+  font-size: 1rem;
+  color: navy;
+}
+
+button#prev {
+  left: 5%;
+}
+
+button#next {
+  position: absolute;
+  right: 5%;
+}
+
+.dishDetail {
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-image: url("https://i.imgur.com/SnIJIDu.jpg");
+  background-attachment: fixed;
+}
+
+.disDetail-wrapper {
+  background-color: rgba(215, 237, 255, 0.808);
+  padding: 0.5rem 0;
+}
+
+.dishDetail .homeBtn {
+  margin: 0 2%;
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.dishDetail h1.dishLabel {
+  display: inline-block;
+  margin-left: 2%;
+}
+
+.dishDetail .dishOther {
+  display: flex;
+  width: 100%;
+}
+
+.dishDetail .dishOther li {
+  list-style: none;
+  flex: 1;
+}
+
+.dishYield {
+  margin-left: 2%;
+}
+
+.dishDetail figure {
+  width: 50%;
+  margin: 0.5rem auto;
+}
+
+.dishDetail figure img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid navy;
+}
+
+.dishDetail h3 {
+  margin-left: 4%;
+}
+
+.dishDetail .dishIng li {
+  list-style: none;
+}
+
+.dishDetail .instruction {
+  text-align: center;
+  display: block;
+}
+
+footer {
+  font-size: 0.6rem;
+  color: darkgray;
+  position: absolute;
+  bottom: 0.2rem;
+  width: 100%;
+  background-color: rgba(215, 237, 255, 0.808);
+}
+
+@media only screen and (min-width: 560px) {
+  .dishDetail figure {
+    width: 30%;
+    float: right;
+    padding-right: 2%;
+  }
+
+  .searchForm {
+    width: 60%;
+  }
+
+  .dishDetail .dishOther {
+    width: 50%;
+  }
+
+  .disDetail-wrapper {
+    min-height: 96vh;
+  }
+}
+/*end media query*/
+@media only screen and (min-width: 1140px) {
+  .dishDetail figure {
+    width: 20%;
+    padding-right: 10%;
+  }
+
+  .dishDetail .dishOther {
+    width: 25%;
+  }
+
+  .searchForm {
+    width: 50%;
+  }
+
+  .dishDetail a {
+    text-align: left;
+    margin-left: 4%;
+  }
+}
+/*end media query*/
