@@ -53,18 +53,18 @@ class App extends React.Component {
       });
     }
   }
+  handleEnterPress = event => {
+    if (event.key === "Enter") {
+      this.getRecipe();
+    }
+  };
 
-  // async componentDidMount(e) {
-  //   const searchInput = this.state.input;
-  //   const api_call = await fetch(
-  //     `https://api.edamam.com/search?q=rice&app_id=${APP_ID}&app_key=${APP_KEY}`
-  //   );
-  //   const response = await api_call.json();
-
-  //   this.setState({
-  //     recipes: response.hits.map(item => item.recipe)
-  //   });
-  // }
+  componentDidMount() {
+    const localSearch = localStorage.getItem("userInput");
+    this.setState({
+      recipes: JSON.parse(localSearch)
+    });
+  }
   getPrevious() {
     this.setState(prevState => {
       return {
@@ -77,10 +77,11 @@ class App extends React.Component {
       return { currentIndex: prevState.currentIndex + 1 };
     });
   }
-  // componentDidUpdate() {
-  //   const userChoice = JSON.stringify(this.state.recipes);
-  //   localStorage.setItem("userChoice", userChoice);
-  // }
+  componentDidUpdate() {
+    const userInput = JSON.stringify(this.state.recipes);
+    localStorage.setItem("userInput", userInput);
+  }
+
   render() {
     const recipesLength = this.state.recipes && this.state.recipes.length;
     // console.log(recipesLength);
@@ -96,6 +97,7 @@ class App extends React.Component {
             recipeName={this.handleChange}
             error={this.state.error}
             disabledBtn={this.state.input === undefined}
+            enterKey={this.handleEnterPress}
           />
         </div>
         {this.state.recipes && (
